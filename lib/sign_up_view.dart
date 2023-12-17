@@ -7,7 +7,7 @@ import 'package:hamam_gaber_task_one/widgets/cornflower_blue_circle_avatar.dart'
 import 'package:hamam_gaber_task_one/widgets/custom_arrow_back_ios_icon_button.dart';
 import 'package:hamam_gaber_task_one/widgets/custom_sign_up_form.dart';
 import 'package:hamam_gaber_task_one/widgets/custom_text_button.dart';
-import 'package:hamam_gaber_task_one/widgets/main_hawkes_bue_container.dart';
+import 'package:hamam_gaber_task_one/widgets/main_hawkes_blue_container.dart';
 import 'package:hamam_gaber_task_one/widgets/text_header.dart';
 import 'package:hamam_gaber_task_one/widgets/tropical_blue_circle_avatar.dart';
 
