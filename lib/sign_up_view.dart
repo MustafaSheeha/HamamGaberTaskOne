@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hamam_gaber_task_one/sign_in_view.dart';
 import 'package:hamam_gaber_task_one/utils/app_strings.dart';
+import 'package:hamam_gaber_task_one/utils/navigation.dart';
 import 'package:hamam_gaber_task_one/widgets/bright_cornflower_blue_container.dart';
 import 'package:hamam_gaber_task_one/widgets/cornflower_blue_circle_avatar.dart';
 import 'package:hamam_gaber_task_one/widgets/custom_arrow_back_ios_icon_button.dart';
@@ -46,7 +48,12 @@ class SignUpView extends StatelessWidget {
             Positioned(
               top: screenHight * 0.92,
               right: screenWidth * 0.07,
-              child: const CustomTextButton(buttonName: AppStrings.signIn),
+              child: CustomTextButton(
+                buttonName: AppStrings.signIn,
+                onPressed: () {
+                  navigatePush(context, const SignInView());
+                },
+              ),
             ),
             Positioned(
               top: screenHight * 0.4,

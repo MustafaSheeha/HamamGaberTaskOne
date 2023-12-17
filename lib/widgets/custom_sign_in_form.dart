@@ -10,7 +10,6 @@ class CustomSignInForm extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenHight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
-     String? name;
      String? email;
      String? password;
     GlobalKey<FormState> signInFormKey = GlobalKey();
@@ -21,15 +20,15 @@ class CustomSignInForm extends StatelessWidget {
           SizedBox(height: screenHight * 0.1),
            CustomTextFormField(
             label: AppStrings.yourEmail,
-            onChanged: (email) {
-              email=email;
+            onChanged: (value) {
+              email=value;
             },
           ),
           SizedBox(height: screenHight * 0.03),
            CustomTextFormField(
             label: AppStrings.password,
-            onChanged: (password) {
-              password=password;
+            onChanged: (value) {
+              password=value;
             },
           ),
           SizedBox(height: screenHight * 0.03),

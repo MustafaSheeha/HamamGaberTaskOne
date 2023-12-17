@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hamam_gaber_task_one/sign_up_view.dart';
 import 'package:hamam_gaber_task_one/utils/app_colors.dart';
 import 'package:hamam_gaber_task_one/utils/app_strings.dart';
+import 'package:hamam_gaber_task_one/utils/navigation.dart';
 import 'package:hamam_gaber_task_one/widgets/bright_cornflower_blue_container.dart';
 import 'package:hamam_gaber_task_one/widgets/cornflower_blue_circle_avatar.dart';
 import 'package:hamam_gaber_task_one/widgets/custom_arrow_back_ios_icon_button.dart';
 import 'package:hamam_gaber_task_one/widgets/custom_sign_in_form.dart';
-import 'package:hamam_gaber_task_one/widgets/custom_sign_up_form.dart';
 import 'package:hamam_gaber_task_one/widgets/custom_text_button.dart';
 import 'package:hamam_gaber_task_one/widgets/main_hawkes_bue_container.dart';
 import 'package:hamam_gaber_task_one/widgets/text_header.dart';
@@ -24,7 +25,7 @@ class SignInView extends StatelessWidget {
           children: [
             const MainHawkesBlueContainer(),
             Positioned(
-                top: screenWidth *-0.2,
+                top: screenWidth * -0.2,
                 right: screenWidth * -0.7,
                 child: const TropicalBlueCircleAvatar()),
             Positioned(
@@ -47,14 +48,14 @@ class SignInView extends StatelessWidget {
                 )),
             Positioned(
                 top: screenHight * 0.95,
-                right: screenWidth * 0.065,
+                right: screenWidth * 0.045,
                 child: BrightCornflowerBlueContainer(
                   width: screenWidth * 0.46,
                   color: AppColors.deepBlush,
                 )),
             Positioned(
                 top: screenHight * 0.95,
-                left: screenWidth * 0.075,
+                left: screenWidth * 0.08,
                 child: const BrightCornflowerBlueContainer()),
             Positioned(
               top: screenHight * 0.92,
@@ -62,7 +63,12 @@ class SignInView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(width: screenWidth * 0.05),
-                  const CustomTextButton(buttonName: AppStrings.signIn),
+                  CustomTextButton(
+                    buttonName: AppStrings.signUp,
+                    onPressed: () {
+                      navigatePush(context, const SignUpView());
+                    },
+                  ),
                   SizedBox(width: screenWidth * 0.15),
                   const CustomTextButton(buttonName: AppStrings.forgotPassword),
                 ],

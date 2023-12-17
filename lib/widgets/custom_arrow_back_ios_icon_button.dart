@@ -1,12 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:hamam_gaber_task_one/utils/app_colors.dart';
+import 'package:hamam_gaber_task_one/utils/navigation.dart';
 
 class CustomArrowBackIOSIconButton extends StatelessWidget {
   const CustomArrowBackIOSIconButton({
-    super.key, this.onPressed,
+    super.key,
   });
-final Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return IconButton(
@@ -14,7 +13,9 @@ final Function()? onPressed;
         Icons.arrow_back_ios,
         color: AppColors.white,
       ),
-      onPressed: onPressed,
+      onPressed: () {
+        navigatePop(context);
+      },
     );
   }
 }

@@ -20,22 +20,22 @@ class CustomSignUpForm extends StatelessWidget {
         children: [
            CustomTextFormField(
             label: AppStrings.name,
-            onChanged: (name) {
-              name=name;
+            onChanged: (value) {
+              name=value;
             },
           ),
           SizedBox(height: screenHight * 0.03),
            CustomTextFormField(
             label: AppStrings.yourEmail,
-            onChanged: (email) {
-              email=email;
+            onChanged: (value) {
+              email=value;
             },
           ),
           SizedBox(height: screenHight * 0.03),
            CustomTextFormField(
             label: AppStrings.password,
-            onChanged: (password) {
-              password=password;
+            onChanged: (value) {
+              password=value;
             },
           ),
           SizedBox(height: screenHight * 0.03),
