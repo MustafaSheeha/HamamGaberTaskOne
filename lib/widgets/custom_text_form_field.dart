@@ -18,7 +18,7 @@ class CustomTextFormField extends StatelessWidget {
       width: screenWidth * 0.8,
       decoration: BoxDecoration(
         color: AppColors.white,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(20),
       ),
       child: TextFormField(
         onTapOutside: (event) {

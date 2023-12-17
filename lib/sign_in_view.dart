@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:hamam_gaber_task_one/utils/app_colors.dart';
 import 'package:hamam_gaber_task_one/utils/app_strings.dart';
 import 'package:hamam_gaber_task_one/widgets/bright_cornflower_blue_container.dart';
 import 'package:hamam_gaber_task_one/widgets/cornflower_blue_circle_avatar.dart';
 import 'package:hamam_gaber_task_one/widgets/custom_arrow_back_ios_icon_button.dart';
+import 'package:hamam_gaber_task_one/widgets/custom_sign_in_form.dart';
 import 'package:hamam_gaber_task_one/widgets/custom_sign_up_form.dart';
 import 'package:hamam_gaber_task_one/widgets/custom_text_button.dart';
 import 'package:hamam_gaber_task_one/widgets/main_hawkes_bue_container.dart';
 import 'package:hamam_gaber_task_one/widgets/text_header.dart';
 import 'package:hamam_gaber_task_one/widgets/tropical_blue_circle_avatar.dart';
 
-class SignUpView extends StatelessWidget {
-  const SignUpView({super.key});
+class SignInView extends StatelessWidget {
+  const SignInView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +24,17 @@ class SignUpView extends StatelessWidget {
           children: [
             const MainHawkesBlueContainer(),
             Positioned(
+                top: screenWidth *-0.2,
+                right: screenWidth * -0.7,
+                child: const TropicalBlueCircleAvatar()),
+            Positioned(
                 top: screenWidth * -1.45,
-                left: screenWidth * -1,
+                left: screenWidth * -0.65,
                 child: const CornflowerBlueCircleAvatar()),
+            Positioned(
+                top: screenWidth * -0.9,
+                left: screenWidth * -0.5,
+                child: const TropicalBlueCircleAvatar()),
             Positioned(
                 top: screenHight * 0.05,
                 left: screenWidth * 0.05,
@@ -33,27 +43,37 @@ class SignUpView extends StatelessWidget {
                 top: screenHight * 0.15,
                 left: screenWidth * 0.07,
                 child: const TextHeader(
-                  title: AppStrings.createAccount,
+                  title: AppStrings.welcomeBack,
                 )),
             Positioned(
-                bottom: screenWidth * -0.65,
-                right: screenWidth * -0.6,
-                child: const TropicalBlueCircleAvatar()),
+                top: screenHight * 0.95,
+                right: screenWidth * 0.065,
+                child: BrightCornflowerBlueContainer(
+                  width: screenWidth * 0.46,
+                  color: AppColors.deepBlush,
+                )),
             Positioned(
                 top: screenHight * 0.95,
-                right: screenWidth * 0.09,
+                left: screenWidth * 0.075,
                 child: const BrightCornflowerBlueContainer()),
             Positioned(
               top: screenHight * 0.92,
-              right: screenWidth * 0.07,
-              child: const CustomTextButton(buttonName: AppStrings.signIn),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(width: screenWidth * 0.05),
+                  const CustomTextButton(buttonName: AppStrings.signIn),
+                  SizedBox(width: screenWidth * 0.15),
+                  const CustomTextButton(buttonName: AppStrings.forgotPassword),
+                ],
+              ),
             ),
             Positioned(
               top: screenHight * 0.4,
               child: Container(
                   padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.09),
                   width: screenWidth,
-                  child: const CustomSignUpForm()),
+                  child: const CustomSignInForm()),
             ),
           ],
         ),
